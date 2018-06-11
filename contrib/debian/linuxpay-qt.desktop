@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Linuxpay
+Comment=Linuxpay P2P Cryptocurrency
+Comment[fr]=Linuxpay, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Linuxpay, eşten eşe kriptografik sanal para birimi
+Exec=linuxpay-qt %u
+Terminal=false
+Type=Application
+Icon=linuxpay128
+MimeType=x-scheme-handler/linuxpay;
+Categories=Office;Finance;

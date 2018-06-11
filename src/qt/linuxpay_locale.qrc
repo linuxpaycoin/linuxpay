@@ -1,0 +1,30 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/linuxpay_bg.qm</file>
+        <file alias="ca">locale/linuxpay_ca.qm</file>
+        <file alias="cs">locale/linuxpay_cs.qm</file>
+        <file alias="da">locale/linuxpay_da.qm</file>
+        <file alias="de">locale/linuxpay_de.qm</file>
+        <file alias="en">locale/linuxpay_en.qm</file>
+        <file alias="en_US">locale/linuxpay_en_US.qm</file>
+        <file alias="es">locale/linuxpay_es.qm</file>
+        <file alias="fi">locale/linuxpay_fi.qm</file>
+        <file alias="fr_FR">locale/linuxpay_fr_FR.qm</file>
+        <file alias="hr">locale/linuxpay_hr.qm</file>
+        <file alias="it">locale/linuxpay_it.qm</file>
+        <file alias="ja">locale/linuxpay_ja.qm</file>
+        <file alias="ko_KR">locale/linuxpay_ko_KR.qm</file>
+        <file alias="nl">locale/linuxpay_nl.qm</file>
+        <file alias="pl">locale/linuxpay_pl.qm</file>
+        <file alias="pt">locale/linuxpay_pt.qm</file>
+        <file alias="pt_BR">locale/linuxpay_pt_BR.qm</file>
+        <file alias="ro_RO">locale/linuxpay_ro_RO.qm</file>
+        <file alias="ru">locale/linuxpay_ru.qm</file>
+        <file alias="sk">locale/linuxpay_sk.qm</file>
+        <file alias="sv">locale/linuxpay_sv.qm</file>
+        <file alias="tr">locale/linuxpay_tr.qm</file>
+        <file alias="uk">locale/linuxpay_uk.qm</file>
+        <file alias="zh_CN">locale/linuxpay_zh_CN.qm</file>
+        <file alias="zh_TW">locale/linuxpay_zh_TW.qm</file>
+    </qresource>
+</RCC>
