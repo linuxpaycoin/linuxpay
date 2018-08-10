@@ -2126,35 +2126,41 @@ int64_t GetBlockValue(int nHeight)
             return 250000 * COIN;
     }
 
-    if (nHeight == 0) {
+   if (nHeight == 0) {
         nSubsidy = 28000000 * COIN;
     } else if (nHeight < 20000 && nHeight > 0) {
         nSubsidy = 50 * COIN;
     } else if (nHeight <= 50000 && nHeight >= 20000) {
         nSubsidy = 200 * COIN;
-    } else if (nHeight <= 100000 && nHeight > 50000) {
+    } else if (nHeight <= 85000 && nHeight > 50000) {
         nSubsidy = 150 * COIN;
-    } else if (nHeight <= 300000 && nHeight > 100000) {
+    } else if (nHeight <= 105000 && nHeight > 85000) {
+        nSubsidy = 250 * COIN;
+    } else if (nHeight <= 115000 && nHeight > 105000) {
+        nSubsidy = 200 * COIN;
+    } else if (nHeight <= 120000 && nHeight > 115000) {
+        nSubsidy = 400 * COIN;
+    } else if (nHeight <= 150000 && nHeight > 120000) {
         nSubsidy = 120 * COIN;
-    } else if (nHeight <= 500000 && nHeight > 300000) {
+    } else if (nHeight <= 200000 && nHeight > 150000) {
         nSubsidy = 100 * COIN;
-    } else if (nHeight <= 410000 && nHeight > 400000) {
+    } else if (nHeight <= 210000 && nHeight > 200000) {
         nSubsidy = 500 * COIN;
-    } else if (nHeight <= 600000 && nHeight > 410000) {
+    } else if (nHeight <= 260000 && nHeight > 210000) {
         nSubsidy = 80 * COIN;
-    } else if (nHeight <= 700000 && nHeight > 600000) {
+    } else if (nHeight <= 360000 && nHeight > 260000) {
         nSubsidy = 70 * COIN;
-    } else if (nHeight <= 800000 && nHeight > 700000) {
-        nSubsidy = 60 * COIN;
-    } else if (nHeight <= 900000 && nHeight > 800000) {
+    } else if (nHeight <= 460000 && nHeight > 360000) {
+        nSubsidy = 100 * COIN;
+    } else if (nHeight <= 560000 && nHeight > 460000) {
         nSubsidy = 50 * COIN;
-    } else if (nHeight <= 1000000 && nHeight > 900000) {
+    } else if (nHeight <= 660000 && nHeight > 560000) {
         nSubsidy = 30 * COIN;
-    } else if (nHeight <= 1100000 && nHeight > 1000000) {
+    } else if (nHeight <= 760000 && nHeight > 660000) {
         nSubsidy = 15 * COIN;
-    } else if (nHeight <= 1200000 && nHeight > 1100000) {
-        nSubsidy = 5 * COIN;
-    } else if (nHeight > 1200000) {
+    } else if (nHeight <= 860000000 && nHeight > 760000) {
+        nSubsidy = 5 * COIN;		
+    } else if (nHeight > 860000) {
         nSubsidy = 0.001 * COIN;
     } else {
         nSubsidy = 0 * COIN;
@@ -2171,16 +2177,43 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
             return 0;
     }
 
-    if (nHeight < 5 && nHeight > 0) {
+     if (nHeight < 5 && nHeight > 0) {
         ret = blockValue  / 100 * 0;
     } else if (nHeight <= 20000) {
         // the initial split of 90% MN, 10% Stakers
         ret = blockValue  / 100 * 90;
-	} else if (nHeight <= 100000 && nHeight >= 20000) {
+	} else if (nHeight <= 84999 && nHeight >= 20000) {
         // the initial split of 75% MN, 25% Stakers
         ret = blockValue  / 100 * 75 ;	
+	} else if (nHeight <= 105000 && nHeight >= 85000) {
+        // the initial split of 90% MN, 10% Stakers
+        ret = blockValue  / 100 * 90 ;
+	} else if (nHeight <= 115000 && nHeight >= 105000) {
+        // the initial split of 75% MN, 25% Stakers
+        ret = blockValue  / 100 * 75 ;
+	} else if (nHeight <= 120000 && nHeight >= 115000) {
+        // the initial split of 90% MN, 10% Stakers
+        ret = blockValue  / 100 * 90 ;
+	} else if (nHeight <= 150000 && nHeight >= 120000) {
+        // the initial split of 80% MN, 20% Stakers
+        ret = blockValue  / 100 * 80 ;
+	} else if (nHeight <= 200000 && nHeight >= 150000) {
+        // the initial split of 60% MN, 40% Stakers
+        ret = blockValue  / 100 * 60 ;
+	} else if (nHeight <= 210000 && nHeight >= 200000) {
+        // the initial split of 80% MN, 20% Stakers
+        ret = blockValue  / 100 * 80 ;
+	} else if (nHeight <= 360000 && nHeight >= 210000) {
+        // the initial split of 75% MN, 25% Stakers
+        ret = blockValue  / 100 * 75 ;
+	} else if (nHeight <= 560000 && nHeight >= 360000) {
+        // the initial split of 80% MN, 20% Stakers
+        ret = blockValue  / 100 * 80 ;
+	} else if (nHeight <= 860000 && nHeight >= 560000) {
+        // the initial split of 60% MN, 40% Stakers
+        ret = blockValue  / 100 * 60 ;
     } else {
-        // increasing the MN reward to 75% as we are decreasing the block value to make room for governance
+        // increasing the MN reward to 60% as we are decreasing the block value to make room for governance
         ret = blockValue  / 100 * 60;
     }
 
