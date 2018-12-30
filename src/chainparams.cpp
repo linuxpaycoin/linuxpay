@@ -146,38 +146,7 @@ public:
         genesis.nTime = 1528554482;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 1641744;
-       /* if (true && genesis.GetHash() != hashGenesisBlock)
-                       {
-                           printf("Searching for genesis block...\n");
-                           uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
-                           uint256 thash;
-
-                           while (true)
-                           {
-                               thash = genesis.GetHash();
-                               if (thash <= hashTarget)
-                                   break;
-                               if ((genesis.nNonce & 0xFFF) == 0)
-                               {
-                                   printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
-                               }
-                               ++genesis.nNonce;
-                               if (genesis.nNonce == 0)
-                               {
-                                   printf("NONCE WRAPPED, incrementing time\n");
-                                   ++genesis.nTime;
-                               }
-                           }
-                           printf("genesis.nTime = %u \n", genesis.nTime);
-                           printf("genesis.nNonce = %u \n", genesis.nNonce);
-                           printf("genesis.nVersion = %u \n", genesis.nVersion);
-                           //printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str()); //first this, then comment this line out and uncomment the one under.
-                           printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str()); //improvised. worked for me, to find merkle root
-
-                       }*/
-
-
-		
+      		
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x0000002046e98f0921ebe8f98596f3e24fc737a7f7aa604eba68413997b07033"));
         assert(genesis.hashMerkleRoot == uint256("0x522b96db5d910d0db8267d9082e4e1f17a03ef0dfeeaf8ae8c2d9c2b7586e85e"));
